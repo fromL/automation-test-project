@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Test Suite 1" verbose="1">
+    <parameter name="a" value="5"/>
+    <parameter name="b" value="15"/>
+    <test name="All Tests">
+        <classes>
+            <class name = "TestCalculator"/>
+        </classes>
+    </test>
+</suite>

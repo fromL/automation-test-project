@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Test Suite 2" verbose="1">
+    <test name="Failed Group tests">
+        <groups>
+            <run>
+                <include name = "failedgroup"/>
+            </run>
+        </groups>
+        <classes>
+            <class name = "TestCalculator"/>
+        </classes>
+    </test>
+</suite>
