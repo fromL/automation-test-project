@@ -4,11 +4,11 @@
     <test name="Failed Group tests">
         <groups>
             <run>
-                <include name = "failedgroup"/>
+                <include name="failedgroup"/>
             </run>
         </groups>
         <classes>
-            <class name = "TestCalculator"/>
+            <class name="testcalculator.TestCalculator"/>
         </classes>
     </test>
 </suite>

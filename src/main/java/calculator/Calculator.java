@@ -1,3 +1,5 @@
+package calculator;
+
 public class Calculator {
 
     private int a = 12; // Do not use public modifier, use getters and setters as below
@@ -16,17 +18,17 @@ public class Calculator {
         return c;
     }
 
-    public static int add(int x, int y){
+    public static int add(int x, int y) {
         int sum = x + y;
         return sum;
     }
 
-    public int subtract(int x, int y){
+    public int subtract(int x, int y) {
         int odds = x - y;
         return odds;
     }
 
-    public int multiply(int x, int y){
+    public int multiply(int x, int y) {
         int product = x * y;
         return product;
     }
@@ -39,5 +41,4 @@ public class Calculator {
             return quotient;
         }
     }
-    }
-
+}

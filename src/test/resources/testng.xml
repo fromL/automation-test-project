@@ -5,7 +5,7 @@
     <parameter name="b" value="15"/>
     <test name="All Tests">
         <classes>
-            <class name = "TestCalculator"/>
+            <class name="testcalculator.TestCalculator"/>
         </classes>
     </test>
 </suite>
