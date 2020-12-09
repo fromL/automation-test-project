@@ -27,7 +27,11 @@
                         <testFailureIgnore>true</testFailureIgnore>
                         <suiteXmlFiles>
                             <suiteXmlFile>${suitePath}testng2.xml</suiteXmlFile>
+                            <suiteXmlFile>${suitePath}automationpractice.xml</suiteXmlFile>
                         </suiteXmlFiles>
+                        <systemPropertyVariables>
+                            <browser>chrome</browser>
+                        </systemPropertyVariables>
                     </configuration>
                 </plugin>
             </plugins>

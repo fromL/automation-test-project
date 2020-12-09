@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Test Suite for testing http://automationpractice.com/ website" verbose="1">
+    <test name="Main Page Tests">
+        <classes>
+            <class name="com.automationpractice.MainPageTest"/>
+        </classes>
+    </test>
+    <test name="LogIn Page Tests">
+        <classes>
+            <class name="com.automationpractice.LogInPageTest"/>
+        </classes>
+    </test>
+</suite>
