@@ -1,8 +1,14 @@
-package com.automationpractice;
+package com.automationpracticetest;
 
+import com.automationpractice.LogInPage;
+import com.automationpractice.MainPage;
+import com.automationpractice.TestListener;
+import com.automationpractice.WebDriverSingleton;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
+
+@Listeners(TestListener.class)
 
 public class MainPageTest extends BaseTest {
 
@@ -24,9 +30,17 @@ public class MainPageTest extends BaseTest {
 
     @Test
     public void openingLogInPageTest() {
-        LogInPage newLogInPage = mainPage.openMainPage().clickSignInButtonMainPage();
+        LogInPage newLogInPage = mainPage
+                .openMainPage()
+                .clickSignInButtonMainPage();
         String headingLogInPage = newLogInPage.getHeadingLogInPage();
-        Assert.assertEquals(headingLogInPage, "AUTHENTICATION", "Log In page heading is incorrect!!!");
+        Assert.assertEquals(
+                headingLogInPage,
+                "AUTHENTICATION1",
+                "Log In page heading is incorrect!!!"
+        );
+
+
     }
 
 }

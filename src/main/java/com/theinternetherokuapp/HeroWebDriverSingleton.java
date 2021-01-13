@@ -1,18 +1,18 @@
-package com.automationpractice;
+package com.theinternetherokuapp;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class WebDriverSingleton {
+public class HeroWebDriverSingleton {
 
     private static WebDriver driverSingleton;
 
-    public enum BrowserNames {
+    enum BrowserNames {
         CHROME, FIREFOX
     }
 
-    private WebDriverSingleton() {
+    private HeroWebDriverSingleton() {
 
     }
     /*"else if" implementation*/

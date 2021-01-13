@@ -1,14 +1,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Test Suite for testing http://automationpractice.com/ website" verbose="1">
+    <listeners>
+        <listener class-name="com.automationpractice.TestListener"/>
+    </listeners>
     <test name="Main Page Tests">
         <classes>
-            <class name="com.automationpractice.MainPageTest"/>
+            <class name="com.automationpracticetest.MainPageTest"/>
         </classes>
     </test>
     <test name="LogIn Page Tests">
         <classes>
-            <class name="com.automationpractice.LogInPageTest"/>
+            <class name="com.automationpracticetest.LogInPageTest"/>
         </classes>
     </test>
 </suite>

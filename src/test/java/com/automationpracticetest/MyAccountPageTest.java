@@ -1,5 +1,7 @@
-package com.automationpractice;
+package com.automationpracticetest;
 
+import com.automationpractice.MyAccountPage;
+import com.automationpractice.WebDriverSingleton;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
