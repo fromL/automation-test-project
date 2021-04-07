@@ -10,3 +10,4 @@ target/
 #Other
 screenshots/
 .allure/
+*.logs
