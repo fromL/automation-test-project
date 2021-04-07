@@ -6,3 +6,8 @@
 # Maven
 log/
 target/
+
+#Other
+screenshots/
+.allure/
+*.logs

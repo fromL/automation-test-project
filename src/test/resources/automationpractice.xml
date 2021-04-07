@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Test Suite for testing http://automationpractice.com/ website" verbose="1">
+    <listeners>
+        <listener class-name="com.utils.TestListener"/>
+    </listeners>
+    <test name="All Tests">
+        <packages>
+            <package name="com.automationpracticetest"/>
+        </packages>
+    </test>
+</suite>
