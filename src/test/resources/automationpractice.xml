@@ -4,14 +4,9 @@
     <listeners>
         <listener class-name="com.utils.TestListener"/>
     </listeners>
-    <test name="Main Page Tests">
-        <classes>
-            <class name="com.automationpracticetest.MainPageTest"/>
-        </classes>
-    </test>
-    <test name="LogIn Page Tests">
-        <classes>
-            <class name="com.automationpracticetest.LogInPageTest"/>
-        </classes>
+    <test name="All Tests">
+        <packages>
+            <package name="com.automationpracticetest"/>
+        </packages>
     </test>
 </suite>

@@ -1,11 +1,11 @@
 package com.automationpracticetest;
 
-import com.automationpractice.LogInPage;
-import com.automationpractice.MainPage;
+import com.automationpractice.pageobjects.LogInPage;
+import com.automationpractice.pageobjects.MainPage;
 import com.utils.TestListener;
-import com.utils.WebDriverSingleton;
-import com.utils.BrowserNames;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -13,30 +13,20 @@ import org.testng.annotations.*;
 
 public class MainPageTest extends BaseTest {
 
-    private WebDriver driver;
     private MainPage mainPage;
-
-    @BeforeMethod
-    public void setUp2() {
-//        driver = WebDriverSingleton.getDriver(System.getProperty("browser")); //implementation without using ENUM
-        driver = WebDriverSingleton.getDriver(BrowserNames.CHROME); //implementation for ENUM
-        mainPage = new MainPage(driver);
-        System.out.println("BeforeMethod from MainPageTest");
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        WebDriverSingleton.killDriverInstance();
-    }
 
     @Test
     public void openingLogInPageTest() {
+        mainPage = new MainPage(driver);
         LogInPage newLogInPage = mainPage
-                .openMainPage()
+                .open()
                 .clickSignInButtonMainPage();
-        String headingLogInPage = newLogInPage.getHeadingLogInPage();
+        WebDriverWait wait1 = (new WebDriverWait(driver, 20));
+        wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class='page-heading']")));
+        newLogInPage.jsScrollToBottom(driver); //Javascript executor - scrolls page to the bottom
+        newLogInPage.jsScrollToTop(driver); //Javascript executor - scrolls page to the top
         Assert.assertEquals(
-                headingLogInPage,
+                newLogInPage.getHeadingLogInPage(),
                 "AUTHENTICATION1",
                 "Log In page heading is incorrect!!!"
         );
